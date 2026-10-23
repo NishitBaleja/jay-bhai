@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ströms Man & Woman | Stockholm Kungsgatan 38 | Exklusivt Mode & Skrädderi</title>
+  <meta name="description" content="Välkommen till Ströms Man & Woman – sedan 1886 och på Kungsgatan 38 sedan 1939. Upptäck exklusivt herrmode och dammode från världens främsta varumärken och vårt eget skrädderi.">
+  <link rel="icon" type="image/png" href="https://stroms.com/cdn/shop/files/STROMS-FAVICON.png">
+
+  <!-- OpenGraph & Twitter Meta -->
+  <meta property="og:site_name" content="Ströms Man & Woman">
+  <meta property="og:title" content="Ströms Man & Woman | Kungsgatan 38 Stockholm">
+  <meta property="og:description" content="Upptäck skandinaviskt och internationellt herrmode & dammode, rockar, kashmirtröjor och skrädderi.">
+  <meta property="og:url" content="https://stroms.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <aside class="announcement-bar" aria-label="Aktuella erbjudanden och butiksinformation">
+    <div class="container announcement-content">
+      <div class="announcement-ticker">
+        <span class="ticker-highlight">ERBJUDANDE YTTERPLAGG:</span>
+        <span>Få en halsduk i 100% kashmir på köpet vid köp av rock eller jacka</span>
+        <span style="opacity: 0.5;">|</span>
+        <span>FRI FRAKT ÖVER 1 500 KR</span>
+      </div>
+
+      <div class="announcement-actions">
+        <a href="#flagshipStore" class="announcement-store-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Kungsgatan 38, Stockholm</span>
+        </a>
+
+        <div class="currency-select-wrapper">
+          <span>VALUTA:</span>
+          <select id="currencySelect" aria-label="Välj valuta">
+            <option value="SEK">SEK (kr)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="USD">USD ($)</option>
+            <option value="GBP">GBP (£)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="main-header" id="mainHeader">
+    <div class="container">
+      <div class="header-top">
+        
+        <!-- Left: Gender Department Toggle -->
+        <nav class="gender-switch" aria-label="Avdelningsväljare">
+          <button class="gender-btn active" data-gender="all" id="genderAllBtn">ALLA</button>
+          <button class="gender-btn" data-gender="man" id="genderManBtn">HERR</button>
+          <button class="gender-btn" data-gender="woman" id="genderWomanBtn">DAM</button>
+        </nav>
+
+        <!-- Center: Luxury Brand Logo -->
+        <div class="brand-logo-wrap">
+          <a href="index.html" class="brand-logo" aria-label="Ströms Man & Woman startsida">
+            STRÖMS
+          </a>
+          <span class="brand-sub">MAN & WOMAN · STOCKHOLM 1886</span>
+        </div>
+
+        <!-- Right: Header Utilities -->
+        <div class="header-actions">
+          <button class="header-action-btn" id="headerSearchBtn" title="Sök i butiken" aria-label="Öppna sökning">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span style="font-size: 0.75rem; letter-spacing: 0.05em; display: none;">SÖK</span>
+          </button>
+
+          <button class="header-action-btn" id="headerWishBtn" title="Önskelista" aria-label="Visa sparade favoriter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+            </svg>
+            <span class="badge-count" id="headerWishCount">0</span>
+          </button>
+
+          <button class="header-action-btn" id="bookConsultationBtn" title="Boka Skräddare / Personal Shopping" aria-label="Boka måttsytt">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase;">MÅTTSYTT</span>
+          </button>
+
+          <button class="header-action-btn" id="headerCartBtn" title="Varukorg" aria-label="Öppna varukorg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4H6z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 01-8 0"></path>
+            </svg>
+            <span class="badge-count" id="headerCartCount">0</span>
+            <span class="cart-btn-amount" id="headerCartAmount" style="margin-left: 6px;">0 kr</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Category Subnav Navigation -->
+    <nav class="category-subnav" aria-label="Huvudkategorier">
+      <div class="container">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="#catalog" class="nav-link active" onclick="App.setSubcat('all');">HÖSTENS NYHETER</a>
+          </li>
+          <li class="nav-item">
+            <a href="#catalog" class="nav-link" onclick="App.setSubcat('ytterplagg');">YTTERPLAGG & ROCKAR</a>
+            <div class="mega-dropdown">
+              <div>
+                <div class="mega-dropdown-title">Herr Ytterplagg</div>
+                <ul class="mega-dropdown-list">
+                  <li><a href="#catalog" onclick="App.setGender('man'); App.setSubcat('ytterplagg');">Raglanrockar i Ull</a></li>
+                  <li><a href="#catalog" onclick="App.setGender('man'); App.setSubcat('ytterplagg');">Vaxade Jackor (Barbour)</a></li>
+                  <li><a href="#catalog" onclick="App.setGender('man'); App.setSubcat('ytterplagg');">Klassiska Gabardinrockar</a></li>
+                  <li><a href="#catalog" onclick="App.setGender('man'); App.setSubcat('ytterplagg');">Dunjackor & Dunvästar</a></li>
+                </ul>
+              </div>
+              <div>
+                <div class="mega-dropdown-title">Dam Ytterplagg</div>
+                <ul class="mega-dropdown-list">
+                  <li><a href="#catalog" onclick="App.setGender('woman'); App.setSubcat('ytterplagg');">Alpacka & Kashmir Kappor</a></li>
+                  <li><a href="#catalog" onclick="App.setGender('woman'); App.setSubcat('ytterplagg');">Quiltade Jackor</a></li>
+                  <li><a href="#catalog" onclick="App.setGender('woman'); App.setSubcat('ytterplagg');">Dubbelknäppta Ullkappor</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#catalog" class="nav-link" onclick="App.setSubcat('trojor');">TRÖJOR & STICKAT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#catalog" class="nav-link" onclick="App.setSubcat('kavajer');">KAVAJER & SKRÄDDAT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#catalog" class="nav-link" onclick="App.setSubcat('skjortor');">SKJORTOR</a>
+          </li>
+          <li class="nav-item">
+            <a href="#catalog" class="nav-link" onclick="App.setSubcat('byxor');">BYXOR & JEANS</a>
+          </li>
+          <li class="nav-item">
+            <a href="#catalog" class="nav-link" onclick="App.setSubcat('skor');">SKOR & ACCESSOARER</a>
+          </li>
+          <li class="nav-item highlight">
+            <a href="#curatedEdits" class="nav-link">THE BROWN EDIT</a>
+          </li>
+          <li class="nav-item">
+            <a href="#heritage" class="nav-link">KUNGSGATAN 38</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       HERO EDITORIAL SPLIT SHOWCASE
+       ========================================================================== -->
+  <section class="hero-section" aria-label="Säsongens kampanjer">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Man Editorial Card -->
+        <article class="hero-card" onclick="App.setGender('man'); document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});">
+          <img src="https://stroms.com/cdn/shop/files/herr-13-ytterplagg-jacka-rock-2-2.jpg?v=1791381885&width=1200" 
+               alt="Ströms Herrkollektion Höst och Vinter" 
+               class="hero-img">
+          <div class="hero-overlay"></div>
+          <div class="hero-caption">
+            <span class="hero-tag">AUTUMN / WINTER 2026</span>
+            <h1 class="hero-title">Sartorial Precision & Italiensk Kashmir</h1>
+            <p class="hero-desc">Upptäck säsongens herrkatalog. Raglanrockar i ren ny ull, handgjorda penny loafers och stickat från Gran Sasso.</p>
+            <span class="hero-btn">
+              UPPTÄCK HERR
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Right: Woman Editorial Card -->
+        <article class="hero-card" onclick="App.setGender('woman'); document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});">
+          <img src="https://stroms.com/cdn/shop/files/dam-13-nyheter-aw26-brunt-1.jpg?v=1789565572&width=1200" 
+               alt="Ströms Damkollektion Höst och Vinter" 
+               class="hero-img">
+          <div class="hero-overlay"></div>
+          <div class="hero-caption">
+            <span class="hero-tag">THE NEW SOPHISTICATION</span>
+            <h2 class="hero-title">Babyalpacka, Manchester & Modern Skrädderi</h2>
+            <p class="hero-desc">Utforska Ströms Woman. Skulpturala silhuetter, varma chokladtoner och tidlös elegans framtagen för den moderna kvinnan.</p>
+            <span class="hero-btn">
+              UPPTÄCK DAM
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BRAND MARQUEE TICKER
+       ========================================================================== -->
+  <section class="brand-ticker-section" aria-label="Varumärken hos Ströms">
+    <div class="ticker-track">
+      <span class="ticker-brand">BARBOUR</span>
+      <span class="ticker-brand">GRAN SASSO</span>
+      <span class="ticker-brand">ETON SHIRTS</span>
+      <span class="ticker-brand">OSCAR JACOBSON</span>
+      <span class="ticker-brand">JACOB COHËN</span>
+      <span class="ticker-brand">STRÖMS SARTORIAL</span>
+      <span class="ticker-brand">CARUSO</span>
+      <span class="ticker-brand">STENSTRÖMS</span>
+      <span class="ticker-brand">TIGER OF SWEDEN</span>
+      <span class="ticker-brand">UBR</span>
+      <span class="ticker-brand">AHLVAR GALLERY</span>
+      <span class="ticker-brand">ATP ATELIER</span>
+      <span class="ticker-brand">TELA GENOVA</span>
+      <!-- Repeated for seamless infinite scroll -->
+      <span class="ticker-brand">BARBOUR</span>
+      <span class="ticker-brand">GRAN SASSO</span>
+      <span class="ticker-brand">ETON SHIRTS</span>
+      <span class="ticker-brand">OSCAR JACOBSON</span>
+      <span class="ticker-brand">JACOB COHËN</span>
+      <span class="ticker-brand">STRÖMS SARTORIAL</span>
+      <span class="ticker-brand">CARUSO</span>
+      <span class="ticker-brand">STENSTRÖMS</span>
+      <span class="ticker-brand">TIGER OF SWEDEN</span>
+      <span class="ticker-brand">UBR</span>
+      <span class="ticker-brand">AHLVAR GALLERY</span>
+      <span class="ticker-brand">ATP ATELIER</span>
+      <span class="ticker-brand">TELA GENOVA</span>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CURATED EDITS (4 Interactive Editorial Cards)
+       ========================================================================== -->
+  <section class="curated-edits-section" id="curatedEdits">
+    <div class="container">
+      
+      <div class="section-head">
+        <div>
+          <div class="section-eyebrow">KURATERADE TEMAN</div>
+          <h2 class="section-title">Säsongens Exklusiva Edits</h2>
+        </div>
+        <a href="#catalog" class="section-link" onclick="App.setSubcat('all');">
+          Se Hela Kollektionen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <div class="edits-grid">
+        
+        <!-- Edit 1: Ytterplaggsdagar -->
+        <div class="edit-card" onclick="App.setSubcat('ytterplagg'); document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});">
+          <img src="https://stroms.com/cdn/shop/files/herr-13-ytterplagg-jacka-rock-2-2.jpg?v=1791381885&width=800" 
+               alt="Ytterplaggsdagar på Ströms" class="edit-card-img">
+          <div class="edit-card-overlay">
+            <span class="edit-card-tag">ERBJUDANDE</span>
+            <h3 class="edit-card-title">Ytterplaggsdagar</h3>
+            <p class="edit-card-sub">Få kashmirhalsduk på köpet vid köp av rock eller jacka</p>
+          </div>
+        </div>
+
+        <!-- Edit 2: The Brown Edit -->
+        <div class="edit-card" onclick="App.setSubcat('trojor'); document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});">
+          <img src="https://stroms.com/cdn/shop/files/meny-herr-gransasso-jacka-telagenova-jeans-aw26-1.jpg?v=1786974961&width=800" 
+               alt="The Brown Edit" class="edit-card-img">
+          <div class="edit-card-overlay">
+            <span class="edit-card-tag">TRENDGUIDE</span>
+            <h3 class="edit-card-title">The Brown Edit</h3>
+            <p class="edit-card-sub">Varma jordtoner, espresso, cognac & lyxig italiensk kashmir</p>
+          </div>
+        </div>
+
+        <!-- Edit 3: Made by Ströms Sartorial -->
+        <div class="edit-card" onclick="App.setSubcat('kavajer'); document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});">
+          <img src="https://stroms.com/cdn/shop/files/meny-herr-kavajer-kostymer-flanell-stromsman-polotrojor-aw26-1.jpg?v=1789565928&width=800" 
+               alt="Made by Ströms Skrädderi" class="edit-card-img">
+          <div class="edit-card-overlay">
+            <span class="edit-card-tag">HANTVERK</span>
+            <h3 class="edit-card-title">Made by Ströms</h3>
+            <p class="edit-card-sub">Vår egen linje av skräddade kostymer & flanellbyxor sedan 1886</p>
+          </div>
+        </div>
+
+        <!-- Edit 4: Brittiska Avdelningen -->
+        <div class="edit-card" onclick="App.setSubcat('ytterplagg'); document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});">
+          <img src="https://stroms.com/cdn/shop/files/british-icons-herr-45-2-barbour-bedale-4.jpg?v=1789548308&width=800" 
+               alt="Brittiska Avdelningen Barbour" class="edit-card-img">
+          <div class="edit-card-overlay">
+            <span class="edit-card-tag">IKONER</span>
+            <h3 class="edit-card-title">Brittiska Avdelningen</h3>
+            <p class="edit-card-sub">Klassiska vaxade jackor, shetlandsull & Harris Tweed</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN PRODUCT CATALOG & INTERACTIVE FILTERS
+       ========================================================================== -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      
+      <div class="section-head">
+        <div>
+          <div class="section-eyebrow">SORTIMENT</div>
+          <h2 class="section-title">Utforska Kollektionen</h2>
+        </div>
+      </div>
+
+      <!-- Filter Controls Bar -->
+      <div class="catalog-filter-bar">
+        
+        <div class="filter-pills" role="tablist">
+          <button class="filter-pill active" data-subcat="all" role="tab">Alla Plagg</button>
+          <button class="filter-pill" data-subcat="ytterplagg" role="tab">Rockar & Ytterplagg</button>
+          <button class="filter-pill" data-subcat="trojor" role="tab">Tröjor & Stickat</button>
+          <button class="filter-pill" data-subcat="kavajer" role="tab">Kavajer & Skräddat</button>
+          <button class="filter-pill" data-subcat="skjortor" role="tab">Skjortor</button>
+          <button class="filter-pill" data-subcat="byxor" role="tab">Byxor & Jeans</button>
+          <button class="filter-pill" data-subcat="skor" role="tab">Skor & Accessoarer</button>
+        </div>
+
+        <div class="catalog-tools">
+          <span class="catalog-count" id="catalogCount">Visar artiklar</span>
+
+          <select class="catalog-sort-select" id="catalogSortSelect" aria-label="Sortera artiklar">
+            <option value="newest">Sortera: Senaste Nyheter</option>
+            <option value="price-low">Pris: Lågt till Högt</option>
+            <option value="price-high">Pris: Högt till Lågt</option>
+            <option value="vendor">Varumärke A-Ö</option>
+          </select>
+
+          <!-- Grid Switcher -->
+          <div class="grid-view-switcher">
+            <button class="grid-view-btn" data-cols="2" title="2 kolumner" aria-label="2 kolumner vy">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="3" y="3" width="8" height="18" rx="1"></rect>
+                <rect x="13" y="3" width="8" height="18" rx="1"></rect>
+              </svg>
+            </button>
+            <button class="grid-view-btn" data-cols="3" title="3 kolumner" aria-label="3 kolumner vy">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="3" y="3" width="5" height="18" rx="1"></rect>
+                <rect x="9.5" y="3" width="5" height="18" rx="1"></rect>
+                <rect x="16" y="3" width="5" height="18" rx="1"></rect>
+              </svg>
+            </button>
+            <button class="grid-view-btn active" data-cols="4" title="4 kolumner" aria-label="4 kolumner vy">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="3" width="4" height="18" rx="1"></rect>
+                <rect x="7.3" y="3" width="4" height="18" rx="1"></rect>
+                <rect x="12.6" y="3" width="4" height="18" rx="1"></rect>
+                <rect x="18" y="3" width="4" height="18" rx="1"></rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Products Grid (Dynamically Populated by App.renderCatalog) -->
+      <div class="products-grid" id="productsGrid" aria-live="polite">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDITORIAL HERITAGE STORY ("KUNGSGATAN 38 SEDAN 1939")
+       ========================================================================== -->
+  <section class="heritage-section" id="heritage">
+    <div class="container">
+      <div class="heritage-grid">
+        
+        <div class="heritage-content">
+          <div class="heritage-eyebrow">ARV & TRADITION</div>
+          <h2 class="heritage-title">Skandinavisk Skräddarkonst på Kungsgatan 38 sedan 1939</h2>
+          <p class="heritage-p">
+            I över ett sekel har Ströms varit en institution i Stockholm för den stilmedvetna kunden. Med rötter som sträcker sig tillbaka till 1886 och den ikoniska hörnbutiken på Kungsgatan 38 sedan 1939 förenar vi klassiskt skrädderi med modern skandinavisk elegans.
+          </p>
+          <p class="heritage-p">
+            I vår butik hittar du ett eget ateljéskrädderi, personliga stilrådgivare och "Made to Measure"-tjänster med tyger från världens främsta väverier som Loro Piana, Ermenegildo Zegna och Vitale Barberis Canonico.
+          </p>
+
+          <div class="heritage-stats">
+            <div>
+              <div class="stat-num">1886</div>
+              <div class="stat-label">Grundat år</div>
+            </div>
+            <div>
+              <div class="stat-num">1939</div>
+              <div class="stat-label">Kungsgatan 38</div>
+            </div>
+            <div>
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Egen Ateljé</div>
+            </div>
+          </div>
+
+          <div class="heritage-actions">
+            <button class="btn-primary" id="heritageConsultBtn" onclick="document.getElementById('consultationModal').classList.add('active');">
+              Boka Måttsytt / Skräddare
+            </button>
+            <a href="#flagshipStore" class="btn-outline">Besök Butiken</a>
+          </div>
+        </div>
+
+        <div class="heritage-visuals">
+          <img src="https://stroms.com/cdn/shop/files/sartorial-project-ss26-herr-800-2.jpg?v=1780310133&width=800" 
+               alt="Ströms skrädderi och måttsytt på Kungsgatan" 
+               class="heritage-main-img">
+          
+          <div class="heritage-badge-card">
+            <svg class="badge-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <div class="badge-card-title">Made to Measure</div>
+            <div class="badge-card-sub">Skapa din unika kostym med perfekt passform och personliga initialer.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FLAGSHIP STORE INFO (KUNGSGATAN 38 STOCKHOLM)
+       ========================================================================== -->
+  <section class="store-flagship-section" id="flagshipStore">
+    <div class="container">
+      
+      <div class="store-card">
+        
+        <div class="store-info-panel">
+          <div class="store-eyebrow">FLAGGSKEPPSBUTIK</div>
+          <h2 class="store-name">Ströms Kungsgatan 38</h2>
+          
+          <div class="store-detail-list">
+            <div class="store-detail-item">
+              <svg class="store-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div>
+                <div class="store-detail-label">Adress</div>
+                <div class="store-detail-val">Kungsgatan 38, 111 35 Stockholm, Sverige</div>
+              </div>
+            </div>
+
+            <div class="store-detail-item">
+              <svg class="store-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div>
+                <div class="store-detail-label">Öppettider</div>
+                <div class="store-detail-val">Mån–Fre: 10:00 – 19:00<br>Lör: 10:00 – 17:00<br>Sön: 12:00 – 16:00</div>
+              </div>
+            </div>
+
+            <div class="store-detail-item">
+              <svg class="store-detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+              </svg>
+              <div>
+                <div class="store-detail-label">Telefon & E-post</div>
+                <div class="store-detail-val">08 - 22 63 00 · kundservice@stroms.com</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 14px;">
+            <button class="btn-primary" onclick="alert('Välkommen in till Kungsgatan 38 i centrala Stockholm. Våra stilspecialister står redo att hjälpa dig!');">Hitta Hit</button>
+            <button class="btn-outline" onclick="document.getElementById('consultationModal').classList.add('active');">Boka Privat Provning</button>
+          </div>
+        </div>
+
+        <div class="store-image-panel">
+          <img src="https://stroms.com/cdn/shop/files/meny-herr-barbour-british-brittiska-avdelningen-telagenova-jeans-aw26-1.jpg?v=1789566348&width=800" 
+               alt="Interiör Ströms Kungsgatan 38 Stockholm">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LUXURY NEWSLETTER SECTION
+       ========================================================================== -->
+  <section class="newsletter-section" aria-label="Nyhetsbrevsprenumeration">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="newsletter-eyebrow">STRÖMS SÄLLSKAP</div>
+        <h2 class="newsletter-title">Bli en del av Ströms</h2>
+        <p class="newsletter-desc">
+          Prenumerera på vårt nyhetsbrev för inbjudningar till VIP-kundkvällar, förhandsvisningar av säsongens kollektioner och stilinspiration. Få 10% välkomstrabatt på ditt första köp.
+        </p>
+
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Ange din e-postadress..." required aria-label="E-postadress">
+          <button type="submit" class="newsletter-btn">GÅ MED NU</button>
+        </form>
+
+        <p class="newsletter-terms">Genom att prenumerera godkänner du vår personuppgiftspolicy. Koden STROMS10 skickas direkt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand-col">
+          <div class="footer-logo">STRÖMS</div>
+          <p class="footer-p">
+            Ströms Man & Woman på Kungsgatan 38 i Stockholm är Skandinaviens främsta destination för skräddat mode, italienska kvalitetsplagg och internationella varumärken sedan 1886.
+          </p>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">
+            Kungsgatan 38, 111 35 Stockholm<br>
+            Telefon: 08 - 22 63 00<br>
+            kundservice@stroms.com
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Avdelningar</div>
+          <ul class="footer-links">
+            <li><a href="#catalog" onclick="App.setGender('man');">Ströms Herr</a></li>
+            <li><a href="#catalog" onclick="App.setGender('woman');">Ströms Dam</a></li>
+            <li><a href="#catalog" onclick="App.setSubcat('ytterplagg');">Ytterplagg & Rockar</a></li>
+            <li><a href="#catalog" onclick="App.setSubcat('kavajer');">Made to Measure / Skrädderi</a></li>
+            <li><a href="#catalog" onclick="App.setSubcat('trojor');">Kashmir & Stickat</a></li>
+            <li><a href="#catalog" onclick="App.setSubcat('skor');">Skor & Loafers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Kundservice</div>
+          <ul class="footer-links">
+            <li><a href="#flagshipStore">Öppettider & Butiken</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Vi erbjuder fri frakt i hela Sverige vid köp över 1500 kr. Normal leveranstid är 1–3 arbetsdagar med PostNord eller Budbee.');">Leverans & Retur</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Storleksguide finns tillgänglig i snabbvyn på varje enskild artikel.');">Storleksguide</a></li>
+            <li><a href="javascript:void(0)" onclick="document.getElementById('consultationModal').classList.add('active');">Boka Privat Rådgivning</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Presentkort kan köpas både online och i butiken på Kungsgatan 38.');">Presentkort</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Kontakta kundservice@stroms.com eller ring 08-22 63 00.');">Kontakta Oss</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Varumärken</div>
+          <ul class="footer-links">
+            <li><a href="#catalog" onclick="App.setSort('vendor');">Barbour</a></li>
+            <li><a href="#catalog" onclick="App.setSort('vendor');">Gran Sasso</a></li>
+            <li><a href="#catalog" onclick="App.setSort('vendor');">Eton Shirts</a></li>
+            <li><a href="#catalog" onclick="App.setSort('vendor');">Oscar Jacobson</a></li>
+            <li><a href="#catalog" onclick="App.setSort('vendor');">Jacob Cohën</a></li>
+            <li><a href="#catalog" onclick="App.setSort('vendor');">Ströms Sartorial</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>COPYRIGHT © 2026 STRÖMS MAN & WOMAN · KUNGSGATAN 38 STOCKHOLM</div>
+        
+        <div class="payment-badges">
+          <span class="payment-pill">KLARNA</span>
+          <span class="payment-pill">APPLE PAY</span>
+          <span class="payment-pill">VISA</span>
+          <span class="payment-pill">MASTERCARD</span>
+          <span class="payment-pill">AMEX</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SLIDE-OUT CART / SHOPPING BAG DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Varukorg">
+    
+    <div class="cart-header">
+      <div class="cart-header-title">Din Varukorg</div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Stäng varukorg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free shipping meter -->
+    <div class="free-shipping-bar">
+      <div class="shipping-text" id="shippingText">Fri frakt över 1 500 kr</div>
+      <div class="shipping-meter">
+        <div class="shipping-progress" id="shippingProgress"></div>
+      </div>
+    </div>
+
+    <!-- Items list -->
+    <div class="cart-items-body" id="cartItemsBody">
+      <!-- Injected by Cart.renderCartUI() -->
+    </div>
+
+    <!-- Cart Footer with Totals -->
+    <div class="cart-footer">
+      <div class="cart-promo-wrap">
+        <input type="text" class="cart-promo-input" id="cartPromoInput" placeholder="KAMPANJKOD (T.EX. STROMS10)">
+        <button class="cart-promo-btn" id="cartPromoBtn">TILLÄMPA</button>
+      </div>
+
+      <div class="cart-totals-row">
+        <span>Delsumma</span>
+        <span id="cartSubtotal">0 kr</span>
+      </div>
+
+      <div class="cart-totals-row" id="cartDiscountRow" style="display: none; color: #2E7D32;">
+        <span>Rabattkod</span>
+        <span id="cartDiscountAmount">-0 kr</span>
+      </div>
+
+      <div class="cart-totals-row">
+        <span>Beräknad frakt</span>
+        <span id="cartShippingCost">Gratis</span>
+      </div>
+
+      <div class="cart-totals-row total-bold">
+        <span>Totalt att betala</span>
+        <span id="cartGrandTotal">0 kr</span>
+      </div>
+
+      <button class="checkout-btn" id="checkoutBtn">TILL KASSAN (EXPRESS CHECKOUT)</button>
+      <div style="font-size: 0.72rem; text-align: center; color: var(--text-muted); margin-top: 10px;">
+        30 dagars öppet köp · Fri retur i butik på Kungsgatan 38
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ==========================================================================
+       QUICK VIEW (SNABBVY) MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="quickviewModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="QuickView.close();" aria-label="Stäng snabbvy">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="quickviewContent">
+        <!-- Rendered by QuickView.open() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FULLSCREEN SEARCH OVERLAY
+       ========================================================================== -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      
+      <div class="search-header-row">
+        <button class="modal-close-btn" id="searchCloseBtn" aria-label="Stäng sökning">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="search-input-wrap">
+        <input type="text" class="search-input-large" id="searchInput" placeholder="Sök efter rockar, kashmir, Barbour, Eton..." autocomplete="off">
+      </div>
+
+      <div class="search-suggestions-title">POPULÄRA SÖKNINGAR</div>
+      <div class="search-chips">
+        <span class="search-chip">Hynes Raglanrock</span>
+        <span class="search-chip">Barbour Bedale</span>
+        <span class="search-chip">Kashmir Polotröja</span>
+        <span class="search-chip">Eton Skjorta</span>
+        <span class="search-chip">Alpacka Kappa</span>
+        <span class="search-chip">Manchester Byxor</span>
+        <span class="search-chip">Penny Loafers</span>
+      </div>
+
+      <div class="search-results-grid" id="searchResultsGrid">
+        <!-- Dynamic Results Live Render -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MADE TO MEASURE & CONSULTATION BOOKING MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="consultationModal">
+    <div class="modal-card" style="max-width: 600px; padding: 40px;">
+      <button class="modal-close-btn" id="consultationCloseBtn" aria-label="Stäng bokning">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div style="text-align: center; margin-bottom: 24px;">
+        <div class="section-eyebrow">SKRÄDDERI & STILRÅDGIVNING</div>
+        <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin-top: 6px;">Boka Måttsytt på Kungsgatan 38</h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 8px;">
+          Boka en kostnadsfri konsultation med vår mästerskräddare. Vi guidar dig genom tygval, snitt, konstruktion och personliga detaljer.
+        </p>
+      </div>
+
+      <form id="consultationForm" style="display: flex; flex-direction: column; gap: 16px;">
+        <div>
+          <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 6px;">Ditt Namn</label>
+          <input type="text" id="consultName" required placeholder="För- och efternamn" style="width: 100%; padding: 12px; border: 1px solid var(--border-medium); border-radius: 2px;">
+        </div>
+
+        <div>
+          <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 6px;">Telefonnummer</label>
+          <input type="tel" id="consultPhone" required placeholder="070-123 45 67" style="width: 100%; padding: 12px; border: 1px solid var(--border-medium); border-radius: 2px;">
+        </div>
+
+        <div>
+          <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 6px;">Typ av Tjänst</label>
+          <select id="consultService" style="width: 100%; padding: 12px; border: 1px solid var(--border-medium); border-radius: 2px; font-family: var(--font-sans);">
+            <option value="Made to Measure Kostym">Made to Measure Kostym / Smoking</option>
+            <option value="Måttsydd Skjorta">Måttsydd Skjorta (Eton / Stenströms)</option>
+            <option value="Måttsydd Rock">Måttsydd Rock i Italiensk Ull</option>
+            <option value="Personal Shopping Dam & Herr">Personal Shopping & Garderobsuppdatering</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 6px;">Önskat Datum</label>
+          <input type="date" id="consultDate" required style="width: 100%; padding: 12px; border: 1px solid var(--border-medium); border-radius: 2px; font-family: var(--font-sans);">
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">BEKRÄFTA BOKNINGSFÖRFRÅGAN</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOAST NOTIFICATION CONTAINER
+       ========================================================================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/quick-view.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
